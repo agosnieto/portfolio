@@ -1,18 +1,14 @@
 body{
-    background-color: #06141B;
-}
-.nav-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    background-color: #CCD0CF;
+    margin: 0;
+    padding: 0;
 }
 .nav-item a{
-    color: color-mix(in srgb, #9BA8AB 50%, #4A5C6A 50%);
+    color: color-mix(in srgb, #253745 50%, #11212D 50%); 
     font-weight: 500;
 }
 .nav-item a:hover{
-    color: #CCD0CF;
+    color: #4A5C6A;
     font-weight: 500;
 }
 .btn-container {
@@ -23,9 +19,9 @@ body{
 }
 
 .btn-conocer{
-    background-color: #4A5C6A;
+    background-color: #9BA8AB;
     border: 1px solid #06141B;
-    color: #CCD0CF;
+    color: #253745;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
     border-radius: 10px;
@@ -33,29 +29,54 @@ body{
     text-decoration: none;
 }
 #name{
-    color: color-mix(in srgb, #9BA8AB 50%, #4A5C6A 50%);
+    color: color-mix(in srgb, #11212D 50%, #4A5C6A 50%);
     font-family: "Playfair Display", serif;
     font-size: 100px;
     text-align: center;
+    animation: caret 0.75s steps(1) infinite;
+}
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
 }
 h1{
-    color: color-mix(in srgb, #9BA8AB 50%, #4A5C6A 50%);
+    color: color-mix(in srgb, #11212D 50%, #4A5C6A 50%);
     font-family: "Playfair Display", serif;
     text-align: center;
+    margin: 15px;
+    padding: 15px;
 }
-h2{
+#developer{
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 50px;
-    color: #CCD0CF;
+    color: #4A5C6A;
     text-align: center;
+    animation: caret 0.75s steps(1) infinite;
 }
-h3{
-    color: #CCD0CF; 
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
 }
 p{
-    color: #CCD0CF;
+    color: #4A5C6A;
     font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+.card-text{
+    color: #253745;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+.container-services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card-title{
+    color: #11212D;
     text-align: center;
 }
 .container-cards{
@@ -64,25 +85,30 @@ p{
     justify-content: space-around;
 }
 .card{
-    background-color: #253745;
+    background-color: #9BA8AB;
 }
 .btn-card{
-    background-color: #4A5C6A;
-    border: 1px solid #06141B;
-    color: #CCD0CF;
+    background-color: #9ba8ab;
+    border: 1px solid #11212D;
+    color: #11212D;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
     border-radius: 10px;
     padding: 7px;
     text-decoration: none;
     align-items: center;
+    margin-left: 4rem;
+}
+.btn-card:hover{
+    background-color: #4A5C6A;
+    color: #CCD0CF;
 }
 #icon-contact{
     display: flex;
     justify-content: center;
 }
 .fab{
-    color:color-mix(in srgb, #9BA8AB 50%, #4A5C6A 50%);
+    color:color-mix(in srgb, #11212D 50%, #4A5C6A 50%);
     font-size: 30px;
     margin: 10px;
 }

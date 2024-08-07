@@ -3,6 +3,9 @@ body{
     margin: 0;
     padding: 0;
 }
+.navbar{
+    position: fixed;
+}
 .nav-item a{
     color: color-mix(in srgb, #253745 50%, #11212D 50%); 
     font-weight: 500;
@@ -60,12 +63,13 @@ h1{
         border-color: transparent;
     }
 }
-p{
+#parrafo-inicio{
     color: #4A5C6A;
     font-family: "Open Sans", sans-serif;
-    text-align: center;
+    text-align: left;
+    margin: 20px;
 }
-.card-text{
+.card-text, .card-title{
     color: #253745;
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -75,8 +79,17 @@ p{
     flex-direction: row;
     justify-content: space-around;
 }
-.card-title{
-    color: #11212D;
+.card-service{
+    background-color: #9BA8AB;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-title-project, .card-text-project{
+    color: #999;
     text-align: center;
 }
 .container-cards{
@@ -84,12 +97,48 @@ p{
     flex-direction: row;
     justify-content: space-around;
 }
-.card{
+.card {
     background-color: #9BA8AB;
+    position: relative;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card-body {
+    padding: 15px;
+}
+.card-title-project, .card-text-project, .btn-card {
+    margin: 10pX 0 10px 0;
+}
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+.card:hover .card-body {
+    opacity: 1;
+    visibility: visible;
 }
 .btn-card{
     background-color: #9ba8ab;
-    border: 1px solid #11212D;
+    /* border: 1px solid #11212D; */
     color: #11212D;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
@@ -97,7 +146,8 @@ p{
     padding: 7px;
     text-decoration: none;
     align-items: center;
-    margin-left: 4rem;
+    margin-left: 5rem;
+    display: inline-block;
 }
 .btn-card:hover{
     background-color: #4A5C6A;
@@ -112,3 +162,22 @@ p{
     font-size: 30px;
     margin: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    #name{
+        color: color-mix(in srgb, #11212D 50%, #4A5C6A 50%);
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        text-align: center;
+        animation: caret 0.75s steps(1) infinite;
+    }
+    .container-cards,.container-services{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card:hover {
+        transform: scale(1);
+    }
+  }

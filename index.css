@@ -162,8 +162,62 @@ h1{
     font-size: 30px;
     margin: 10px;
 }
+@media (max-width: 768px){
+    .container-cards,.container-services{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .card-service{
+        background-color: #9BA8AB;
+        width: 300px;
+        height: 250px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card-text, .card-title{
+        color: #253745;
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+        font-family: 12px;
+    }
+    .card {
+        background-color: #9BA8AB;
+        position: relative;
+        width: 250px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1);
+    }
+}
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
+    #name{
+        color: color-mix(in srgb, #11212D 50%, #4A5C6A 50%);
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        text-align: center;
+        animation: caret 0.75s steps(1) infinite;
+    }
+    .container-cards,.container-services{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card:hover {
+        transform: scale(1);
+    }
+  }
+  @media(max-width: 576px){
     #name{
         color: color-mix(in srgb, #11212D 50%, #4A5C6A 50%);
         font-family: "Playfair Display", serif;
